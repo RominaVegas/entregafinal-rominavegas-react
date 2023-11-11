@@ -4,7 +4,7 @@ import { serverTimestamp } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { Link } from "react-router-dom";
-import "./checkoutOficial.css";
+import "./CheckoutOficial.css";
 
 const CheckoutOficial = () => {
   const [userData, setUserData] = useState({
