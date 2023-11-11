@@ -1,0 +1,18 @@
+.cart {
+  background: #be9191;
+  margin-top: 20px;
+  color: black;
+  padding: 10px;
+
+  justify-content: center;
+}
+
+.cart2 {
+  background: #ccbaba;
+  margin: 10px;
+}
+
+h1 {
+  font-size: medium;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
