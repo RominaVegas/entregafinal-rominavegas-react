@@ -15,7 +15,7 @@ const Footer = () => {
         marginTop: "10px",
       }}
     >
-      <h4 style={{ color: "white" }}>Amelia Dress🎀</h4>
+      <h4 style={{ color: "white", fontSize: "10" }}>Amelia Dress🎀</h4>
       <Link to="/">
         <img
           className="logo"
