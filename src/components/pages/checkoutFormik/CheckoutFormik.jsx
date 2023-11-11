@@ -12,10 +12,7 @@ const CheckoutFormik = () => {
       repetPassword: "",
     },
 
-    onSubmit: (data) => {
-      console.log("se envio");
-      console.log(data);
-    },
+    onSubmit: (data) => {},
 
     validateOnChange: false,
 
@@ -32,15 +29,13 @@ const CheckoutFormik = () => {
         .required("El campo es obligatorio")
         .matches(/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,15}$/, {
           message:
-            "La contraseña debe tener al menos una mayuscual una minusca bla bla ",
+            "La contraseña debe tener al menos una mayuscula una minuscula ",
         }),
       repetPassword: Yup.string()
         .required("El campo es obligatorio")
         .oneOf([Yup.ref("password")], "Las contraseñas no coinciden"),
     }),
   });
-
-  console.log(errors);
 
   return (
     <div style={{ padding: "50px" }}>

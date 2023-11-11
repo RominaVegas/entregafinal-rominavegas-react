@@ -19,11 +19,7 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(userInfo);
   };
-
-  console.log(errors);
 
   return (
     <div>

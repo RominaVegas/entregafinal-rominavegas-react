@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
-import "./cart.css";
+import "./Cart.css";
 
 const Cart = () => {
   const { cart, clearCart, deleteProductById, getTotalPrice } =
