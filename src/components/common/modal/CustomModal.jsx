@@ -1,8 +1,7 @@
 import ItemListContainer from "../../pages/itemListContainer/ItemListContainer";
 import CounterContainer from "../counter/CounterContainer";
 
-const CustomModal = ( {children} ) => {
-   
+const CustomModal = ({ children }) => {
   return (
     <div
       style={{
@@ -13,10 +12,7 @@ const CustomModal = ( {children} ) => {
     >
       <h2>Este es el modal</h2>
 
-      {/* Aca el hijo */}
-
       {children}
-      
     </div>
   );
 };
