@@ -10,23 +10,20 @@ export const ItemDetail = ({
 }) => {
   return (
     <div>
-      <div className={"containerItemDetail"}>
-        <div className={"containerImage"}>
+      <div className="containerItemDetail">
+        <div className="containerImage">
           <img src={productSelected.img} alt="" />
         </div>
 
-        <div className={"containerDetail"}>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Nombre:</span>{" "}
-            {productSelected.title}
+        <div className="containerDetail">
+          <h2 style={{ fontFamily: "monospace", fontSize: "23px" }}>
+            <span>Nombre:</span> {productSelected.title}
           </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Descripcion:</span>{" "}
-            {productSelected.description}
+          <h2 style={{ fontFamily: "monospace", fontSize: "23px" }}>
+            <span>Descripcion:</span> {productSelected.description}
           </h2>
-          <h2 style={{ fontFamily: "monospace" }}>
-            <span style={{ fontSize: "23px" }}>Precio:</span> $
-            {productSelected.price}.-
+          <h2 style={{ fontFamily: "monospace", fontSize: "23px" }}>
+            <span>Precio:</span> ${productSelected.price}.-
           </h2>
         </div>
       </div>
@@ -34,14 +31,7 @@ export const ItemDetail = ({
       {initial && <h4>Ya tienes {initial} unidades en el carrito</h4>}
 
       {showCounter ? (
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            padding: "20px",
-            border: "1px solid black",
-          }}
-        >
+        <div className="counterContainer">
           <CounterContainer
             stock={productSelected.stock}
             onAdd={onAdd}

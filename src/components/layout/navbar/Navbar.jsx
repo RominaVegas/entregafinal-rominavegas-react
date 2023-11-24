@@ -7,6 +7,11 @@ import { collection, getDocs } from "firebase/firestore";
 
 export const Navbar = () => {
   const [categories, setCategories] = useState([]);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   useEffect(() => {
     const categoriesCollection = collection(db, "categories");
@@ -23,7 +28,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className={"containerNavbar"}>
+      <div className="containerNavbar">
         <Link to="/">
           <img
             className="logo"
@@ -32,16 +37,28 @@ export const Navbar = () => {
           />
         </Link>
 
-        <ul className="categories">
-          <Link to={"/"}>
-            <li>Todos</li>
-          </Link>
-          {categories.map((category) => (
-            <Link key={category.id} to={category.path}>
-              <li>{category.name}</li>
+        <div className="menuContainer">
+          <div
+            className={`menuIcon ${isMenuOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+
+          <ul className={`categories ${isMenuOpen ? "open" : ""}`}>
+            <Link to={"/"} onClick={toggleMenu}>
+              <li>Todos</li>
             </Link>
-          ))}
-        </ul>
+            {categories.map((category) => (
+              <Link key={category.id} to={category.path} onClick={toggleMenu}>
+                <li>{category.name}</li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+
         <CartWidget />
       </div>
     </>

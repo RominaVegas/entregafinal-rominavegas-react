@@ -19,6 +19,7 @@ const ProductCard = ({ item }) => {
         display: "flex",
         flexDirection: "column",
         flexWrap: "wrap",
+        marginTop: "50px",
       }}
     >
       <CardMedia
